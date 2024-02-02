@@ -1,0 +1,94 @@
+---
+import ArrowIcon from "./icons/ArrowIcon.astro";
+import XpandLogo from "./icons/XpandLogo.astro";
+import ButtonForm from "./react/buttonForm";
+import HeaderButton from "./react/headerButton";
+import Title from "./title.astro";
+---
+
+<section class="bg-xp-base h-auto lg:h-[1200px]">
+    <header
+        class="flex items-center justify-center max-w-[1480px] m-auto py-6 md:py-12 px-4 md:px-8 md:justify-between"
+    >
+        <XpandLogo className="w-[220px] aspect-[220px/30px]" />
+        <span class="text-secondary font-ibm text-lg hidden md:inline"
+            >Comenzar ahora</span
+        >
+
+        <HeaderButton
+            client:load
+        />
+    </header>
+    <div class="w-full h-[calc(100%_-_126px)] relative md:px-8">
+        <div class="text-center m-auto h-full">
+            <div
+                class="h-[280px] sm:h-[350px] md:h-[500px] aspect-video max-w-7xl hero flex justify-center items-center w-full mb-6 md:mb-0 lg:mb-14 m-auto"
+            >
+                <Title as="h1" variant="white" className="w-[90%] sm:w-[80%]">
+                    Eleva tu negocio al futuro con nuestras soluciones a medida
+                </Title>
+            </div>
+            <div class="px-8 flex flex-col items-center">
+                <p
+                    class="font-hanken text-white md:font-ibm md:text-secondary text-lg sm:text-2xl mb-6 sm:mb-14 lg:mb-0 sm:max-w-[80%] md:max-w-3xl text-balance"
+                >
+                    Adquiere una ventaja competitiva con una experiencia
+                    tecnológica personalizada para tus clientes
+                </p>
+                <div
+                    class="min-w-[300px] max-w-[400px] w-full aspect-video bg-gray-300 rounded-[15px] sm:min-w-[500px] md:min-w-[600px] lg:min-w-[800px] m-auto lg:absolute lg:bottom-[-35%] lg:translate-y-[-50%] lg:left-0 lg:right-0"
+                >
+                    Video
+                </div>
+                <a
+                    href="#potential"
+                    class="border-2 rounded-full border-secondary size-8 hidden lg:flex flex-col items-center justify-center mt-20 shadow-lg floatButton"
+                >
+                    <ArrowIcon />
+                </a>
+                <ButtonForm
+                    client:load
+                    label="Da el primer paso ahora"
+                    variant="secondary"
+                    className="my-14 lg:hidden"
+                >
+                    Da el primer paso ahora &gt;
+                </ButtonForm>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        background-image: url("/hero.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0 32px;
+    }
+
+    .floatButton {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .hero {
+            background-image: url("/hero-m.svg");
+            background-size: cover;
+            margin-bottom: 50px;
+        }
+    }
+
+    @keyframes float {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(-10px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
+    }
+</style>

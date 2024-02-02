@@ -1,0 +1,25 @@
+---
+import AccordeonList from "./react/accordeonList";
+import ButtonForm from "./react/buttonForm";
+import Title from "./title.astro";
+---
+
+<section class="bg-xp-base">
+    <div
+        class="max-w-[1300px] m-auto py-[50px] px-8 md:py-[130px] md:px-[68px] flex flex-col items-center"
+    >
+        <Title variant="white" className="md:text-center">
+            Soluciones a medida, diseñadas especialmente para ti
+        </Title>
+
+        <AccordeonList client:visible />
+        <ButtonForm
+            client:visible
+            label="Descubre lo que Xpand tiene para ti"
+            variant="secondary"
+            className="mt-14"
+        >
+            Descubre lo que Xpand tiene para ti &gt;
+        </ButtonForm>
+    </div>
+</section>

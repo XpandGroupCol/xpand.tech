@@ -1,0 +1,60 @@
+---
+import Title from "./title.astro";
+import InstagramLogo from "./icons/InstagramLogo.astro";
+import LinkedinLogo from "./icons/LinkedinLogo.astro";
+import ButtonForm from "./react/buttonForm";
+---
+
+<footer class="bg-white">
+    <div
+        class="pt-[50px] md:pt-[120px] max-w-[1300px] m-auto py-[100px] pb-[40px] px-8 md:px-[68px] flex flex-col items-center"
+    >
+        <div class="flex flex-col lg:flex-row mb-12 gap-10">
+            <div class="w-full lg:w-[60%] flex-col items-center">
+                <Title className="mb-[40px]">
+                    El futuro no sucede, nosotros lo creamos.
+                </Title>
+
+                <ButtonForm
+                    client:visible
+                    label="Solicitar asesoría gratuita ahora"
+                    className="!max-w-[350px] m-auto"
+                >
+                    Solicitar asesoría gratuita ahora &gt;
+                </ButtonForm>
+            </div>
+            <img
+                src="/footer.svg"
+                class="order-[-1] lg:order-1 hidden lg:block m-auto md:w-[400px] lg:w-[500px]"
+            />
+        </div>
+
+        <nav
+            class="text-[20px] lg:text-base flex justify-between flex-col lg:flex-row w-full text-[#cbcbcd] gap-5"
+        >
+            <div
+                class="flex lg:items-center gap-6 flex-col lg:mb-0 lg:flex-row"
+            >
+                <a href="#" class="hover:underline">Políticas de privacidad</a>
+                <a href="#" class="hover:underline">Términos y condiciones</a>
+                <a href="#" class="hover:underline">Ayuda</a>
+            </div>
+            <hr class="my-6 border-[#eae6e687] lg:hidden" />
+            <div class="flex lg:items-center gap-6 flex-col lg:flex-row">
+                <div class="flex gap-6">
+                    <a
+                        class="hover:scale-110 transition-all duration-200 cursor-pointer"
+                    >
+                        <InstagramLogo className="w-[30px] h-[30px]" />
+                    </a>
+                    <a
+                        class="hover:scale-110 transition-all duration-200 cursor-pointer"
+                    >
+                        <LinkedinLogo className="w-[30px] h-[30px]" />
+                    </a>
+                </div>
+                <span>© Xpand Tech. 2024 All rights reserved.</span>
+            </div>
+        </nav>
+    </div>
+</footer>
