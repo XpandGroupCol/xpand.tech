@@ -1,4 +1,4 @@
-import { forwardRef, type ReactNode } from "react"
+import { forwardRef } from "react"
 
 interface Props {
     name: string
