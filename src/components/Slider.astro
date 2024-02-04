@@ -2,6 +2,7 @@
 import ButtonForm from "./react/buttonForm";
 import Title from "./title.astro";
 import CarrouselMobile from "./react/carrousel/mobile"
+import WebSlider from  "./react/carrousel/web"
 ---
 
 <section class="bg-white">
@@ -17,7 +18,10 @@ import CarrouselMobile from "./react/carrousel/mobile"
         >
             &lt; Casos de éxito: Inspiración que transforma industrias &gt;
         </p>
-        <CarrouselMobile />
+       <div class="mb-12">
+        <CarrouselMobile client:visible />
+        <WebSlider client:visible />
+       </div>
         <ButtonForm
             client:visible
             label="Transforma tu empresa con nosotros > "
