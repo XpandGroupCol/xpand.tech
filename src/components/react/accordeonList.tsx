@@ -5,7 +5,7 @@ import { ACCORDEON_DATA } from '@/config/accordeon-data'
 
 const AccordeonList = () => {
 
-    const [currentActive, setCurrentActive] = useState<any>({})
+    const [currentActive, setCurrentActive] = useState<any>({1:1})
 
     const handleClick = (id: string | number) =>  setCurrentActive((prev:any ) => {
         if(prev[id]) {
