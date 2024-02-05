@@ -12,7 +12,9 @@ import Title from "./title.astro";
             Soluciones a medida, diseñadas especialmente para ti
         </Title>
 
-        <AccordeonList client:visible />
+        <div class="max-w-5xl w-full">
+            <AccordeonList client:visible />
+        </div>
         <ButtonForm
             client:visible
             label="Descubre lo que Xpand tiene para ti"

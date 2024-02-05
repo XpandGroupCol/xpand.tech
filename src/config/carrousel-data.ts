@@ -20,13 +20,13 @@ export const CARROUSEL_DATA = [
     {
         img: "yamaha.svg",
         title: "Nuestra estrategia de eCommerce con Xpand multiplicó nuestro alcance y ventas en este canal.",
-        autor: "Nataly Bustos ",
+        autor: "Nataly Bustos",
         charge: "Directora eCommerce"
     },
     {
         img: "conaltura.svg",
         title: "Xpand transformó nuestra visión inmobiliaria en una experiencia digital única.",
-        autor: " Erick Sánchez",
+        autor: "Erick Sánchez",
         charge: "Gerente de Mercadeo"
     }
 ]

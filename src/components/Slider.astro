@@ -1,8 +1,7 @@
 ---
 import ButtonForm from "./react/buttonForm";
 import Title from "./title.astro";
-import CarrouselMobile from "./react/carrousel/mobile"
-import WebSlider from  "./react/carrousel/web"
+import {CarrouselMobile, WebSlider} from "./react/carrousel"
 ---
 
 <section class="bg-white">
@@ -14,12 +13,12 @@ import WebSlider from  "./react/carrousel/web"
             futuro
         </Title>
         <p
-            class="font-ibm text-xp-base  text-lg sm:text-2xl mb-12 sm:max-w-[80%] text-balance text-center"
+            class="font-ibm text-xp-base  text-xl sm:text-2xl mb-12 sm:max-w-[80%] text-balance text-center"
         >
             &lt; Casos de éxito: Inspiración que transforma industrias &gt;
         </p>
        <div class="mb-12">
-        <CarrouselMobile client:visible />
+        <CarrouselMobile client:idle />
         <WebSlider client:visible />
        </div>
         <ButtonForm
