@@ -29,21 +29,21 @@ export const ACCORDEON_DATA = [{
 {
     id: 5,
     header: 'Consultoría de datos',
-    title: '<Conecta con el Mundo:',
-    paragraph: 'Tu App Móvil, Tu Huella Digital>',
+    title: '<Estrategias de Análisis:',
+    paragraph: 'Información que cambia el Juego y predicen la respuesta de mercado>',
     img: '/5.webp'
 },
 {
     id: 6,
     header: 'Consultoría en I.A',
-    title: '<Conecta con el Mundo:',
-    paragraph: 'Tu App Móvil, Tu Huella Digital>',
+    title: '<Adelántate al Futuro:',
+    paragraph: 'Soluciones de IA que Reescriben las Reglas>',
     img: '/6.webp'
 },
 {
     id: 7,
     header: 'Internet of things (IoT)',
-    title: '<Conecta con el Mundo:',
-    paragraph: 'Tu App Móvil, Tu Huella Digital>',
+    title: '<Conectividad Sin Límites:',
+    paragraph: 'Soluciones IoT que Revolucionan Cada Aspecto de tu Negocio y Te Conectan con el Futuro>',
     img: '/7.webp'
 }]
