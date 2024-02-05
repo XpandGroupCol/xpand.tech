@@ -1,4 +1,4 @@
-import Button from "../react/button"
+import Button from "../../react/button"
 import { useModalStore } from '@/store'
 
 
