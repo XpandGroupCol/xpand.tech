@@ -1,17 +1,17 @@
 import { useState } from "react"
-import Modal from "../react/modal"
+import Modal from "../../react/modal"
 
 import CloseIcon from "@/components/icons/CloseIcon.tsx"
-import XpandLogoSmall from "../icons/XpandSmallLogo"
-import Form from "../react/form"
-import Stepper from "../react/stepper"
+import XpandLogoSmall from "../../icons/XpandSmallLogo"
+import Form from "../../react/form"
+import Stepper from "../../react/stepper"
 import { STEPPER_DATA } from "@/config/stepper-data"
 import { FormProvider, useForm } from "react-hook-form"
-import { invitationSchema, invitationValues } from '../react/form/schema'
+import { invitationSchema, invitationValues } from '../../react/form/schema'
 import { useCreateLead } from "@/hooks/useCreateLead"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { validateForm } from "@/utils/validateForm"
-import ThankYou from "../react/form/thankYou"
+import ThankYou from "../../react/form/thankYou"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useModalStore } from '@/store'
@@ -32,13 +32,11 @@ const ModalForm = () => {
     const { handleSubmit, trigger, reset } = methods
 
     const onCloseModal = () => {
-        // setIsOpen(false)
         onClose()
         setStep(1)
         reset({ ...invitationValues })
         resetFetch()
     }
-    // const onOpenModal = () => setIsOpen(true)
 
 
     const onNext = async () => {
@@ -106,7 +104,7 @@ const ModalForm = () => {
                                             Volver
                                         </button>
                                         <button disabled={load} className="border-2 disabled:!bg-gray-300 disabled:border-gray-300 hover:opacity-95 transition-all duration-300  bg-primary disabled:text-xp-base text-white px-6 py-2 inline-flex justify-center items-center font-hanken italic rounded-full w-full h-[46px] md:h-[56px] min-w-[150px]" type={'button'} onClick={!isLastStep ? onNext : handleSubmit(onSubmit)}>
-                                            {isLastStep ? 'Enviar' : 'Siguiente'}
+                                            {load? 'Enviando ...': isLastStep ? 'Enviar' : 'Siguiente'}
                                         </button>
                                     </div>
                                 </form>

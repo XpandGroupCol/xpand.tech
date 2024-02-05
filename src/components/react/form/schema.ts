@@ -8,7 +8,7 @@ export const invitationValues = {
     email: '',
     phone: '',
     acct_name: '',
-    presupuesto_tech: "1.000.000 a 4.000.00",
+    presupuestotech: "1.000.000 a 4.000.00",
 }
 
 export const invitationSchema = yup.object().shape({
@@ -17,5 +17,5 @@ export const invitationSchema = yup.object().shape({
     email: yup.string().email('Ingrese un correo electrónico valido.').required('El correo electrónico es requerido.'),
     phone: yup.string().matches(phoneRegExp, 'Ingrese un número telefonico valido.').min(10, 'El número debe tener 10 digitos'),
     acct_name: yup.string().required('El nombre de la empresa es requerido.'),
-    presupuesto_tech: yup.string().required('El presupuesto es requerido.'),
+    presupuestotech: yup.string().required('El presupuesto es requerido.'),
 }).required()
