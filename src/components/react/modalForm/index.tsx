@@ -60,8 +60,20 @@ const ModalForm = () => {
     }
 
     const onSubmit = async (values: any) => {
-
-        await createLead({ ...values, tag: 154, list: 33 }).then((data) => {
+        const contact = {
+            ...values,
+            fieldValues: [
+                {
+                    "field": "29",
+                    "value": values.acct_name
+                },
+                {
+                    "field": "30",
+                    "value": values.presupuestotech
+                }
+            ]
+        }
+        await createLead({ ...contact, tag: 154, list: 33 }).then((data) => {
             if (data) {
                 setStep(prev => prev + 1)
             }
@@ -104,7 +116,7 @@ const ModalForm = () => {
                                             Volver
                                         </button>
                                         <button disabled={load} className="border-2 disabled:!bg-gray-300 disabled:border-gray-300 hover:opacity-95 transition-all duration-300  bg-primary disabled:text-xp-base text-white px-6 py-2 inline-flex justify-center items-center font-hanken italic rounded-full w-full h-[46px] md:h-[56px] min-w-[150px]" type={'button'} onClick={!isLastStep ? onNext : handleSubmit(onSubmit)}>
-                                            {load? 'Enviando ...': isLastStep ? 'Enviar' : 'Siguiente'}
+                                            {load ? 'Enviando ...' : isLastStep ? 'Enviar' : 'Siguiente'}
                                         </button>
                                     </div>
                                 </form>
