@@ -11,6 +11,9 @@ export default {
 				'primary': '#0A169A',
 				'secondary': '#9BF5F7',
 				'xp-white': '#E6E6E6'
+			},
+			screens: {
+				xs:'500px'
 			}
 		},
 	},

@@ -3,21 +3,25 @@ import "@fontsource/ibm-plex-mono/400.css";
 import "@fontsource-variable/hanken-grotesk";
 
 interface Props {
-	title: string;
+	title?: string;
 }
 
-const { title } = Astro.props;
+const { title = 'Xpand Group - Tech' } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="En Xpand tech encontraras soluciones de sofware a tu medida, para móviles, web, eCommerce t más." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<meta property="og:image" content="/og.webp" />
+		<meta property="og:url" content={Astro.url.href} />
+		<meta property="og:locale" content="es_ES" />
+		<meta property="og:type" content="website" />
 	</head>
 	<body>
 		<slot />

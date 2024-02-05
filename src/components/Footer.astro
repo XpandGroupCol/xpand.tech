@@ -2,7 +2,7 @@
 import Title from "./title.astro";
 import InstagramLogo from "./icons/InstagramLogo.astro";
 import LinkedinLogo from "./icons/LinkedinLogo.astro";
-import ButtonForm from "./react/buttonForm";
+import ButtonForm from "./modalForm/buttonForm";
 ---
 
 <footer class="bg-white">
@@ -30,7 +30,7 @@ import ButtonForm from "./react/buttonForm";
         </div>
 
         <nav
-            class="text-[20px] lg:text-base flex justify-between flex-col lg:flex-row w-full text-[#cbcbcd] gap-5"
+            class="text-base lg:text-base flex justify-between flex-col lg:flex-row w-full text-[#9d9da1] gap-5"
         >
             <div
                 class="flex lg:items-center gap-6 flex-col lg:mb-0 lg:flex-row"
@@ -43,14 +43,20 @@ import ButtonForm from "./react/buttonForm";
             <div class="flex lg:items-center gap-6 flex-col lg:flex-row">
                 <div class="flex gap-6">
                     <a
+                        href="https://www.instagram.com/xpandgroupco/"
+                        target="_blank"
                         class="hover:scale-110 transition-all duration-200 cursor-pointer"
                     >
                         <InstagramLogo className="w-[30px] h-[30px]" />
+                        <span class="sr-only">instagram logo</span>
                     </a>
                     <a
+                        href="https://co.linkedin.com/company/xpand-group-sas"
+                        target="_blank"
                         class="hover:scale-110 transition-all duration-200 cursor-pointer"
                     >
                         <LinkedinLogo className="w-[30px] h-[30px]" />
+                        <span class="sr-only">linkedin logo</span>
                     </a>
                 </div>
                 <span>© Xpand Tech. 2024 All rights reserved.</span>

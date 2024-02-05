@@ -4,57 +4,20 @@ import Header from "@/components/Header.astro";
 import Potential from "@/components/Potential.astro";
 import Solutions from "@/components/Solutions.astro";
 import Footer from "@/components/Footer.astro";
+import Future from "@/components/Future.astro";
+import Slider from "@/components/Slider.astro";
+import ModalForm from "@/components/modalForm";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout>
 	<Header />
 	<main>
 		<Potential />
 		<Solutions />
+		<Slider />
+		<Future />
 	</main>
-	<!-- <main>
 
-	
-		<section>
-			<div class="max-w-7xl m-auto py-[130px] px-[68px]">
-				<Title>
-					Únete a la lista exclusiva de empresarios que están creando
-					el futuro
-				</Title>
-				<p>
-					&lt;Casos de éxito: Inspiración que transforma
-					industrias&gt;
-				</p>
-				<Button
-					onClick={() => {}}
-					label="Transforma tu futuro hoy, agenda ya"
-				>
-					Transforma tu futuro hoy, agenda ya &gt;
-				</Button>
-			</div>
-		</section>
-		<section class="bg-base">
-			<div class="max-w-7xl m-auto py-[130px] px-[68px]">
-				<Title variant="white">
-					Da el primer paso hacía un futuro inigualable
-				</Title>
-				<div></div>
-				<p>
-					Ponte en contacto ahora, para una consultoría personalizada
-					gratuita.
-				</p>
-				<Button
-					onClick={() => {}}
-					label="Programa tu consultoría personalizada"
-					variant="secondary"
-				>
-					Programa tu consultoría personalizada &gt;
-				</Button>
-			</div>
-		</section> -->
-		<!-- </main>
-	-->
-	</main>
-	<Footer/>
-
+	<Footer />
+	<ModalForm client:idle />
 </Layout>

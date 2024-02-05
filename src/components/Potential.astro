@@ -1,5 +1,5 @@
 ---
-import ButtonForm from "./react/buttonForm";
+import ButtonForm from "./modalForm/buttonForm";
 import Title from "./title.astro";
 ---
 
@@ -8,13 +8,13 @@ import Title from "./title.astro";
         class="max-w-[1300px] m-auto py-[50px] px-8 md:py-[130px] lg:pt-[250px] md:px-[68px] flex flex-col items-center"
     >
         <div
-            class="relative flex items-center justify-center flex-col font-ibm text-[20px]"
+            class="relative flex items-center justify-center flex-col font-ibm text-base sm:text-[20px]"
         >
             <span class="undertake">Emprende un viaje</span>
 
             <picture class="inline-block my-7">
                 <source media="(max-width: 767px)" srcset="/spiral-m.svg" />
-                <img src="/spiral.svg" />
+                <img src="/spiral.svg" alt="spiral" loading='lazy' />
             </picture>
             <span class="innovation">de innovación y crecimiento</span>
         </div>
@@ -23,7 +23,7 @@ import Title from "./title.astro";
             tecnología
         </Title>
         <p
-            class="text-[30px] leading-[36px] font-hanken mb-16 text-xp-base md:text-center max-w-4xl m-auto"
+            class="text-xl sm:text-2xl font-hanken mb-16 text-xp-base md:text-center max-w-4xl m-auto"
         >
             <strong>En Xpand Group,</strong> fusionamos creatividad, tecnología y
             estrategia para forjar experiencias digitales sin presentes.

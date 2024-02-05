@@ -1,8 +1,8 @@
 ---
 import ArrowIcon from "./icons/ArrowIcon.astro";
 import XpandLogo from "./icons/XpandLogo.astro";
-import ButtonForm from "./react/buttonForm";
-import HeaderButton from "./react/headerButton";
+import ButtonForm from "./modalForm/buttonForm";
+import HeaderButton from "./modalForm/headerButton";
 import Title from "./title.astro";
 ---
 
@@ -15,9 +15,7 @@ import Title from "./title.astro";
             >Comenzar ahora</span
         >
 
-        <HeaderButton
-            client:load
-        />
+        <HeaderButton client:idle />
     </header>
     <div class="w-full h-[calc(100%_-_126px)] relative md:px-8">
         <div class="text-center m-auto h-full">
@@ -30,24 +28,27 @@ import Title from "./title.astro";
             </div>
             <div class="px-8 flex flex-col items-center">
                 <p
-                    class="font-hanken text-white md:font-ibm md:text-secondary text-lg sm:text-2xl mb-6 sm:mb-14 lg:mb-0 sm:max-w-[80%] md:max-w-3xl text-balance"
+                    class="font-hanken text-white md:font-ibm md:text-secondary text-xl sm:text-2xl mb-6 sm:mb-14 lg:mb-0 sm:max-w-[80%] md:max-w-3xl text-balance"
                 >
                     Adquiere una ventaja competitiva con una experiencia
                     tecnológica personalizada para tus clientes
                 </p>
                 <div
-                    class="min-w-[300px] max-w-[400px] w-full aspect-video bg-gray-300 rounded-[15px] sm:min-w-[500px] md:min-w-[600px] lg:min-w-[800px] m-auto lg:absolute lg:bottom-[-35%] lg:translate-y-[-50%] lg:left-0 lg:right-0"
+                    class="min-w-[250px] max-w-[400px] w-full overflow-hidden aspect-video bg-gray-300 rounded-[15px] sm:min-w-[500px] md:min-w-[600px] lg:min-w-[800px] m-auto lg:absolute lg:bottom-[-35%] lg:translate-y-[-50%] lg:left-0 lg:right-0"
                 >
-                    Video
+                    <video controls class="w-full h-full" controlslist="nodownload">
+                        <source src="https://aws-shareflow-pub.s3.amazonaws.com/landing-tech.mp4#t=1" type="video/mp4" />
+                    </video>
                 </div>
                 <a
                     href="#potential"
-                    class="border-2 rounded-full border-secondary size-8 hidden lg:flex flex-col items-center justify-center mt-20 shadow-lg floatButton"
+                    class="border-2 rounded-full border-secondary size-8 hidden lg:flex flex-col items-center justify-center mt-20 shadow-lg floatButton transition-all duration-200 hover:shadow-sm hover:shadow-secondary"
                 >
+                <span class="sr-only">arrow icon</span>
                     <ArrowIcon />
                 </a>
                 <ButtonForm
-                    client:load
+                    client:idle
                     label="Da el primer paso ahora"
                     variant="secondary"
                     className="my-14 lg:hidden"

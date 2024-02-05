@@ -1,0 +1,14 @@
+---
+import type { Feature } from "@/config/feature-data"
+import clsx from "clsx"
+const {data} = Astro.props
+---
+
+    {
+        data.map(({ img, alt,text }: Feature) => (
+            <div class="flex flex-col items-center">
+                <img class={clsx(" h-auto mb-3 w-[85px] lg:w-[100px]")} src={img} alt={alt} />
+                <span class="text-xp-white text-center w-full inline-block text-[12px] md:text-xl break-all text-balance">{text}</span>
+            </div>
+        ))
+    }

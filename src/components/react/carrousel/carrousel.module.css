@@ -1,0 +1,22 @@
+.xpCarrousel {
+    width: 100%;
+    max-width: 1024px;
+}
+
+.xpCarrousel :global(.swiper-slide) {
+    background-position: center;
+    background-size: cover;
+    width: 450px;
+}
+
+
+.xpCarrousel :global(.swiper-container) {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+:global(.swiper-slide-active) :global(.xp-hidden){
+    visibility: hidden;
+    transition: all 10ms ease-in-out;
+}

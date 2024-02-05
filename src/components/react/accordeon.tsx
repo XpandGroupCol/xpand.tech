@@ -12,8 +12,8 @@ const Accordeon = ({ title, paragraph, img, header, current, id, onClick }: Prop
     return (
         <div className="w-full">
             <article className="w-full border-t-2 border-secondary">
-                <nav className="flex justify-between items-center font-ibm text-secondary text-md md:text-lg py-[30px] transition-all duration-200 px-2 cursor-pointer hover:bg-[#23262e]" role="button" tabIndex={-1} onClick={() => onClick(id)}>
-                    <h4 className=" max-w-[220px] text-balance">{header}</h4>
+                <nav className="flex justify-between items-center font-ibm text-secondary text-md md:text-lg py-[30px] transition-all duration-200 px-2 cursor-pointer hover:bg-[#23262e]" onClick={() => onClick(id)}>
+                    <h4 className="max-w-[150px] sm:max-w-[220px] text-balance">{header}</h4>
                     <button aria-label={title} className="flex items-center gap-2">
                         <div className="relative">
                             <span className="w-4 h-[2px] bg-secondary block absolute left-0 top-0 right-0 bottom-0 m-auto" />
@@ -28,7 +28,7 @@ const Accordeon = ({ title, paragraph, img, header, current, id, onClick }: Prop
                 })}>
                     <div className='flex items-center gap-[20px] md:gap-[40px] md:max-w-fit m-auto flex-col md:flex-row pb-[30px]'>
                         <img src={img} className="w-[170px] md:w-[220px] aspect-square" alt={`${title}, ${paragraph}`} loading="lazy" />
-                        <div className="flex flex-col items-center gap-[18px] md:gap-[36px] text-[18px] md:text-2xl [&>p]:p-0 [&>p]:m-0 font-hanken">
+                        <div className="flex flex-col items-center gap-[18px] md:gap-[36px] text-[18px] md:text-xl [&>p]:p-0 [&>p]:m-0 font-hanken">
                             <div>
                                 <h5 className="font-bold">{title}</h5>
                                 <p className="font-light">{paragraph}</p>

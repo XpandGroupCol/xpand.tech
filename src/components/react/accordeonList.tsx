@@ -1,7 +1,6 @@
 import { useState } from "react"
 import Accordeon from "./accordeon"
 import { ACCORDEON_DATA } from '@/config/accordeon-data'
-import type { ItemType } from "@/config/types"
 
 
 const AccordeonList = () => {

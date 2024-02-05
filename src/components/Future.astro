@@ -1,0 +1,43 @@
+---
+import FeatureRow from "./FeatureRow.astro";
+import ButtonForm from "./modalForm/buttonForm";
+import Title from "./title.astro";
+import { FEATURE_DATA } from "@/config/feature-data";
+---
+
+<section class="bg-xp-base">
+    <div
+        class="max-w-[1300px] m-auto py-[50px] px-8 md:py-[130px] md:px-[68px] flex flex-col items-center"
+    >
+        <div class="relative">
+            <Title
+                className="text-center relative z-10 lg:max-w-3xl"
+                variant="white"
+            >
+                Da el primer paso hacía un futuro inigualable
+            </Title>
+            <img
+                src="/title-bg.svg"
+                alt="Da el primer paso hacía un futuro inigualable"
+                class="absolute top-0"
+            />
+        </div>
+        <div class="grid grid-cols-2 gap-8 xs:grid-cols-3 lg:grid-cols-6 lg:gap-12 my-12 lg:my-20">
+            <FeatureRow data={FEATURE_DATA} />
+        </div>
+        <p
+            class="font-ibm text-secondary text-lg sm:text-2xl mb-10 md:mb-20 mt-6 md:m-0 sm:max-w-[80%] md:max-w-3xl text-balance text-center"
+        >
+            Ponte en contacto ahora, para una consultoría personalizada
+            gratuita.
+        </p>
+       
+        <ButtonForm
+            client:visible
+            label="Transforma tu empresa con nosotros > "
+            variant="secondary"
+        >
+            Programa tu consultoría personalizada &gt;
+        </ButtonForm>
+    </div>
+</section>
