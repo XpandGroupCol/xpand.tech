@@ -12,7 +12,7 @@ const Accordeon = ({ title, paragraph, img, header, current, id, onClick }: Prop
     return (
         <div className="w-full">
             <article className="w-full border-t-2 border-secondary">
-                <nav className="flex justify-between items-center font-ibm text-secondary text-md md:text-lg py-[30px] transition-all duration-200 px-2 cursor-pointer hover:bg-[#23262e]" role="button" tabIndex={-1} onClick={() => onClick(id)}>
+                <nav className="flex justify-between items-center font-ibm text-secondary text-md md:text-lg py-[30px] transition-all duration-200 px-2 cursor-pointer hover:bg-[#23262e]" onClick={() => onClick(id)}>
                     <h4 className="max-w-[150px] sm:max-w-[220px] text-balance">{header}</h4>
                     <button aria-label={title} className="flex items-center gap-2">
                         <div className="relative">

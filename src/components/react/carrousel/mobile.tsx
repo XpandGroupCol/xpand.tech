@@ -38,7 +38,7 @@ const CarrouselMobile = () => {
                         &gt;
                     </button>
                 </div>
-                <img src='/quote.svg' className="absolute" />
+                <img src='/quote.svg' className="absolute" alt="quote" />
                 <picture className="w-full flex justify-end mb-6 min-h-[80px]">
                     <img src={current.img} alt={current.title} className="w-[80px]" />
                 </picture>

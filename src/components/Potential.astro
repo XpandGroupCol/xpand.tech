@@ -1,5 +1,5 @@
 ---
-import ButtonForm from "./react/buttonForm";
+import ButtonForm from "./modalForm/buttonForm";
 import Title from "./title.astro";
 ---
 
@@ -13,8 +13,8 @@ import Title from "./title.astro";
             <span class="undertake">Emprende un viaje</span>
 
             <picture class="inline-block my-7">
-                <source media="(max-width: 767px)" srcset="/spiral-m.svg"  />
-                <img src="/spiral.svg" alt="spiral" />
+                <source media="(max-width: 767px)" srcset="/spiral-m.svg" />
+                <img src="/spiral.svg" alt="spiral" loading='lazy' />
             </picture>
             <span class="innovation">de innovación y crecimiento</span>
         </div>

@@ -2,7 +2,7 @@
 import Title from "./title.astro";
 import InstagramLogo from "./icons/InstagramLogo.astro";
 import LinkedinLogo from "./icons/LinkedinLogo.astro";
-import ButtonForm from "./react/buttonForm";
+import ButtonForm from "./modalForm/buttonForm";
 ---
 
 <footer class="bg-white">
@@ -42,13 +42,17 @@ import ButtonForm from "./react/buttonForm";
             <hr class="my-6 border-[#eae6e687] lg:hidden" />
             <div class="flex lg:items-center gap-6 flex-col lg:flex-row">
                 <div class="flex gap-6">
-                    <a href="#"
+                    <a
+                        href="https://www.instagram.com/xpandgroupco/"
+                        target="_blank"
                         class="hover:scale-110 transition-all duration-200 cursor-pointer"
                     >
                         <InstagramLogo className="w-[30px] h-[30px]" />
                         <span class="sr-only">instagram logo</span>
                     </a>
-                    <a href="#"
+                    <a
+                        href="https://co.linkedin.com/company/xpand-group-sas"
+                        target="_blank"
                         class="hover:scale-110 transition-all duration-200 cursor-pointer"
                     >
                         <LinkedinLogo className="w-[30px] h-[30px]" />
