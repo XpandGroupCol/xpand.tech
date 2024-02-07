@@ -1,6 +1,6 @@
 import clsx from "clsx"
-import Button from "./button"
 import type { ItemType } from "@/config/types"
+import ButtonForm from "./modalForm/buttonForm"
 
 interface Props extends ItemType {
     current?: any,
@@ -33,9 +33,15 @@ const Accordeon = ({ title, paragraph, img, header, current, id, onClick }: Prop
                                 <h5 className="font-bold">{title}</h5>
                                 <p className="font-light">{paragraph}</p>
                             </div>
-                            <Button onClick={() => { }} label='test' variant="secondary" size="sm">
+                            <ButtonForm
+                                client:visible
+                                label="Descubre lo que Xpand tiene para ti"
+                                variant="secondary"
+                                className="mt-14"
+                                size="sm"
+                            >
                                 Cotizar proyecto &gt;
-                            </Button>
+                            </ButtonForm>
                         </div>
                     </div>
                 </main>
