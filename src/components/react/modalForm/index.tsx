@@ -105,7 +105,7 @@ const ModalForm = () => {
                             :
                             <>
                                 <p className="text-[18px] md:text-xl text-xp-base text-center mb-6">Completa la siguiente información:</p>
-                                <form className="flex-1 flex flex-col">
+                                <form id="formtech" className="flex-1 flex flex-col">
                                     <Form step={step} />
                                     <div className="flex flex-col gap-[20px] mt-12 md:mt-0 md:flex-row md:max-w-md mx-auto w-full">
                                         <button
