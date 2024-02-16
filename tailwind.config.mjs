@@ -5,7 +5,8 @@ export default {
 		extend: {
 			fontFamily: {
 				ibm: 'IBM Plex Mono',
-				hanken: 'Hanken Grotesk Variable'
+				hanken: 'Hanken Grotesk Variable',
+				worksans: 'Work Sans Variable'
 			}, colors: {
 				'xp-base': '#252930',
 				'primary': '#0A169A',
