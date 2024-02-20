@@ -36,25 +36,33 @@ import Title from "./title.astro";
                 <div
                     class="min-w-[250px] max-w-[400px] w-full overflow-hidden aspect-video bg-gray-300 rounded-[15px] sm:min-w-[500px] md:min-w-[600px] lg:min-w-[800px] m-auto lg:absolute lg:bottom-[-35%] lg:translate-y-[-50%] lg:left-0 lg:right-0"
                 >
-                    <video controls class="w-full h-full" controlslist="nodownload">
-                        <source src="https://aws-shareflow-pub.s3.amazonaws.com/landing-tech.mp4#t=1" type="video/mp4" />
+                    <video
+                        controls
+                        class="w-full h-full"
+                        controlslist="nodownload"
+                    >
+                        <source
+                            src="https://aws-shareflow-pub.s3.amazonaws.com/landing-tech.mp4#t=1"
+                            type="video/mp4"
+                        />
                     </video>
                 </div>
-                <a
-                    href="#potential"
-                    class="border-2 rounded-full border-secondary size-8 hidden lg:flex flex-col items-center justify-center mt-20 shadow-lg floatButton transition-all duration-200 hover:shadow-sm hover:shadow-secondary"
-                >
-                <span class="sr-only">arrow icon</span>
-                    <ArrowIcon />
-                </a>
+
                 <ButtonForm
                     client:idle
                     label="Da el primer paso ahora"
                     variant="secondary"
-                    className="my-14 lg:hidden"
+                    className="my-4"
                 >
                     Da el primer paso ahora &gt;
                 </ButtonForm>
+                <a
+                    href="#potential"
+                    class="border-2 rounded-full border-secondary size-8 hidden lg:flex flex-col items-center justify-center  shadow-lg floatButton transition-all duration-200 hover:shadow-sm hover:shadow-secondary"
+                >
+                    <span class="sr-only">arrow icon</span>
+                    <ArrowIcon />
+                </a>
             </div>
         </div>
     </div>
