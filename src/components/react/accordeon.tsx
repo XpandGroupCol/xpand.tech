@@ -35,7 +35,6 @@ const Accordeon = ({ title, paragraph, img, header, current, id, onClick }: Prop
                             </div>
                             <ButtonForm
                                 client:visible
-                                label="Descubre lo que Xpand tiene para ti"
                                 variant="secondary"
                                 className="mt-14"
                                 size="sm"
